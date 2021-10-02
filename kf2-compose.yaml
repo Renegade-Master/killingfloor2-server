@@ -1,0 +1,8 @@
+services:
+  kf2-server:
+    build:
+      context: .
+      dockerfile: docker/kf2-server.Dockerfile
+    volumes:
+      - ./data/.steam:/home/steam/.steam:z
+      - ./data/steamapps:/home/steam/steamapps:z
